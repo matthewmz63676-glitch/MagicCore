@@ -1,0 +1,13 @@
+config-version: 1
+
+server-name: "MagicCore SMP"
+preset: CUSTOM # ECONOMY_SMP, LIFESTEAL_SMP, DONUT_LIKE, CUSTOM
+language: en_US
+
+safety:
+  require-confirmation-for-destructive-actions: true
+  reject-main-thread-io: true
+
+io:
+  threads: 4
+  queue-capacity: 1024

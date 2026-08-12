@@ -1,0 +1,25 @@
+config-version: 1
+
+# SQLITE is the beginner default. MARIADB and MONGODB are supported providers.
+provider: SQLITE
+
+sqlite:
+  file: data/magiccore.db
+
+mariadb:
+  host: localhost
+  port: 3306
+  database: magiccore
+  username: magiccore
+  password-from: env:MAGICCORE_DB_PASSWORD
+  pool-size: 10
+
+mongodb:
+  connection-string-from: env:MAGICCORE_MONGODB_URI
+  database: magiccore
+  # Critical modules fail closed if transaction capability is unavailable.
+  require-transactions: true
+
+timeouts:
+  connect-seconds: 10
+  operation-seconds: 5

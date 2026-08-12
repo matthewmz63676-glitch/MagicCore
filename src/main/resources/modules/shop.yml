@@ -1,0 +1,25 @@
+config-version: 1
+currency: COINS
+gem-shop:
+  enabled: true
+  currency: GEMS
+  confirmation-seconds: 30
+  products:
+    - id: GEM_DIAMONDS
+      category: RESOURCES
+      display-name: "<aqua>Diamond Bundle</aqua>"
+      material: DIAMOND
+      amount: 8
+      item-data-base64: ""
+      price-minor: 25
+      required-capability: ""
+      minimum-playtime-seconds: 0
+      minimum-kills: 0
+products:
+  - id: stone
+    category: blocks
+    material: STONE
+    amount: 16
+    buy-price-minor: 200
+    sell-price-minor: 50
+    item-data-base64: ""

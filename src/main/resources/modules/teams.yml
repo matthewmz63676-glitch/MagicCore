@@ -1,0 +1,12 @@
+config-version: 1
+
+name-policy:
+  minimum-length: 3
+  maximum-length: 16
+  pattern: "[A-Za-z0-9_]+"
+  blocked-names: [admin, staff, owner, console, magiccore]
+
+invitations:
+  expires-seconds: 300
+
+friendly-fire: false

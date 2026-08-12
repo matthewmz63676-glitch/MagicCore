@@ -1,0 +1,14 @@
+config-version: 1
+recipes:
+  - id: mineral-cache
+    display-name: Mineral Cache
+    stock: 250
+    per-player-limit: 10
+    cooldown-seconds: 300
+    ingredients:
+      - { item-id: "minecraft:iron_ingot", amount: 32 }
+      - { item-id: "minecraft:gold_ingot", amount: 8 }
+    rewards:
+      - { id: coins, type: CURRENCY, weight: 70, currency: COINS, amount-minor: 750, material: AIR, amount: 0, item-data-base64: "" }
+      - { id: diamond, type: ITEM, weight: 25, currency: COINS, amount-minor: 0, material: DIAMOND, amount: 3, item-data-base64: "" }
+      - { id: emerald, type: ITEM, weight: 5, currency: COINS, amount-minor: 0, material: EMERALD, amount: 8, item-data-base64: "" }

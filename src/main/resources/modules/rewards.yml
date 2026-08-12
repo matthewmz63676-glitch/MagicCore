@@ -1,0 +1,32 @@
+config-version: 1
+
+daily:
+  cooldown-hours: 24
+  choices: 1
+  pool:
+    - id: DAILY_COINS_COMMON
+      display: "<white>Coin Pouch</white>"
+      rarity: COMMON
+      weight: 80
+      currency: COINS
+      amount-minor: 10000
+    - id: DAILY_COINS_RARE
+      display: "<aqua>Large Coin Pouch</aqua>"
+      rarity: RARE
+      weight: 20
+      currency: COINS
+      amount-minor: 50000
+
+playtime:
+  policy: SEQUENTIAL # SEQUENTIAL or INDEPENDENT
+  milestones:
+    - id: PLAYTIME_60_MINUTES
+      display: "<green>One Hour Reward</green>"
+      required-minutes: 60
+      currency: COINS
+      amount-minor: 25000
+    - id: PLAYTIME_300_MINUTES
+      display: "<gold>Five Hour Reward</gold>"
+      required-minutes: 300
+      currency: COINS
+      amount-minor: 100000

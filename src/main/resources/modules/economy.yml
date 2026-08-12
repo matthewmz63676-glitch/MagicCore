@@ -1,0 +1,23 @@
+config-version: 1
+primary-currency: COINS
+
+currencies:
+  COINS:
+    display: Coins
+    symbol: "$"
+    decimal-places: 2
+    starting-balance-minor: 0
+    maximum-balance-minor: 100000000000000
+  GEMS:
+    display: Gems
+    symbol: "◆"
+    decimal-places: 0
+    starting-balance-minor: 0
+    maximum-balance-minor: 1000000000
+
+payments:
+  enabled: true
+  require-confirmation-above-minor: 1000000
+
+analytics:
+  extreme-issuance-warning-minor: 100000000

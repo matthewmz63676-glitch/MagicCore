@@ -1,0 +1,28 @@
+config-version: 1
+starting-hearts: 10
+minimum-hearts: 1
+maximum-hearts: 20
+revival-hearts: 5
+same-player-cooldown-seconds: 3600
+non-player-death-policy: LOSE_HEART
+elimination-action: SPECTATOR
+revival-enabled: false
+heart-item:
+  material: NETHER_STAR
+  display-name: "<red>Heart</red>"
+recipe:
+  enabled: true
+  shape: ["DED", "ENE", "DED"]
+  ingredients:
+    D: DIAMOND_BLOCK
+    E: EMERALD_BLOCK
+    N: NETHER_STAR
+revival-item:
+  material: TOTEM_OF_UNDYING
+  display-name: "<gold>Revival Heart</gold>"
+revival-recipe:
+  enabled: false
+  shape: ["GGG", "GHG", "GGG"]
+  ingredients:
+    G: GOLD_BLOCK
+    H: HEART_OF_THE_SEA

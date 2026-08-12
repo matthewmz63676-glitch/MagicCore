@@ -1,0 +1,7 @@
+config-version: 1
+currency: COINS
+minimum-unit-price-minor: 1
+maximum-unit-price-minor: 10000000
+minimum-duration-seconds: 300
+maximum-duration-seconds: 604800
+categories: [blocks, tools, weapons, armor, consumables, misc]

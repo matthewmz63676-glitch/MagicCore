@@ -1,0 +1,3 @@
+package com.magicstudios.magiccore.config.model;
+import java.util.List;import java.util.Map;
+public record ToolsFile(int configVersion,List<Tool>tools){public ToolsFile{tools=List.copyOf(tools);}public record Tool(String id,String material,String displayName,int durability,long cooldownMillis,String dropPolicy,List<String>blockAllowlist,Recipe recipe,List<Upgrade>upgrades){public Tool{blockAllowlist=List.copyOf(blockAllowlist);upgrades=List.copyOf(upgrades);}}public record Recipe(boolean enabled,List<String>shape,Map<String,String>ingredients){public Recipe{shape=List.copyOf(shape);ingredients=Map.copyOf(ingredients);}}public record Upgrade(int level,String shape,int radius,int depth,int dropMultiplier){} }

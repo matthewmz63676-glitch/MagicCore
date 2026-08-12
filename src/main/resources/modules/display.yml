@@ -1,0 +1,24 @@
+config-version: 1
+refresh-seconds: 5
+scoreboard:
+  enabled: true
+  title: "<gold><bold>MagicCore SMP</bold></gold>"
+  lines:
+    - "<dark_gray>────────────</dark_gray>"
+    - "<gray>Rank:</gray> <white>%magiccore_ranks_id%</white>"
+    - "<gray>Balance:</gray> <green>%magiccore_economy_balance%</green>"
+    - "<gray>Hearts:</gray> <red>%magiccore_lifesteal_hearts%</red>"
+    - "<gray>Kills:</gray> <yellow>%magiccore_stats_kills%</yellow>"
+tab:
+  enabled: true
+  header: "<gold><bold>MagicCore SMP</bold></gold>"
+  footer: "<gray>Play fair • Have fun</gray>"
+  name-format: "<gray>[</gray><white>%magiccore_ranks_id%</white><gray>]</gray> <white>%player_name%</white>"
+below-name:
+  enabled: true
+  label: "❤"
+chat:
+  enabled: true
+  format: "<gray>[</gray><white>%magiccore_ranks_id%</white><gray>]</gray> <white>%player_name%</white><dark_gray>:</dark_gray> <message>"
+  mentions-enabled: true
+leaderboard-cache-seconds: 30

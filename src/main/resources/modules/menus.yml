@@ -1,0 +1,84 @@
+config-version: 1
+theme:
+  fill-material: BLACK_STAINED_GLASS_PANE
+  accent-material: CYAN_STAINED_GLASS_PANE
+  positive-material: LIME_DYE
+  negative-material: RED_DYE
+  previous-material: ARROW
+  close-material: BARRIER
+  next-material: ARROW
+layouts:
+  main: { title: "<dark_gray>Server | Main Menu", rows: 6 }
+  info: { title: "<dark_gray>Server | Information", rows: 6 }
+  server: { title: "<dark_gray>Server | Navigation", rows: 6 }
+  settings: { title: "<dark_gray>Profile | Settings", rows: 6 }
+  profile: { title: "<dark_gray>Profile | Overview", rows: 6 }
+  gemshop: { title: "<dark_gray>Shop | Gems", rows: 6 }
+  playerwarps: { title: "<dark_gray>Travel | PlayerWarps", rows: 6 }
+  selling: { title: "<dark_gray>Shop | Sell Items", rows: 6 }
+  storage: { title: "<dark_gray>Profile | Secure Storage", rows: 6 }
+  events: { title: "<dark_gray>Server | Events", rows: 6 }
+root-entries:
+  - id: INFO
+    slot: 20
+    material: BOOK
+    name: "<aqua><b>Server Info</b>"
+    lore: ["<white>Rules, links, and helpful details", "", "<aqua>► Click to open"]
+    menu-id: info
+    required-capability: ""
+  - id: PROFILE
+    slot: 22
+    material: PLAYER_HEAD
+    name: "<light_purple><b>Your Profile</b>"
+    lore: ["<white>View progress and account status", "", "<light_purple>► Click to open"]
+    menu-id: profile
+    required-capability: ""
+  - id: SETTINGS
+    slot: 24
+    material: COMPARATOR
+    name: "<yellow><b>Settings</b>"
+    lore: ["<white>Control messages and presentation", "", "<yellow>► Click to open"]
+    menu-id: settings
+    required-capability: ""
+  - id: GEMSHOP
+    slot: 29
+    material: EMERALD
+    name: "<green><b>GemShop</b>"
+    lore: ["<white>Spend gems on configured products", "", "<green>► Click to open"]
+    menu-id: gemshop
+    required-capability: ""
+  - id: PLAYERWARPS
+    slot: 31
+    material: ENDER_PEARL
+    name: "<aqua><b>PlayerWarps</b>"
+    lore: ["<white>Browse community destinations", "", "<aqua>► Click to open"]
+    menu-id: playerwarps
+    required-capability: ""
+  - id: SELLING
+    slot: 33
+    material: GOLD_INGOT
+    name: "<gold><b>Sell Items</b>"
+    lore: ["<white>Sell hand, category, or inventory", "", "<gold>► Click to open"]
+    menu-id: selling
+    required-capability: ""
+  - id: SERVER
+    slot: 38
+    material: COMPASS
+    name: "<aqua><b>Server Navigation</b>"
+    lore: ["<white>Spawn, warps, markets, and staff tools", "", "<aqua>► Click to open"]
+    menu-id: server
+    required-capability: ""
+  - id: EVENTS
+    slot: 40
+    material: BEACON
+    name: "<gold><b>Server Events</b>"
+    lore: ["<white>KOTH and vote-party status", "", "<gold>► Click to open"]
+    menu-id: events
+    required-capability: ""
+  - id: STORAGE
+    slot: 42
+    material: ENDER_CHEST
+    name: "<light_purple><b>Secure Storage</b>"
+    lore: ["<white>Lease-protected vaults and ender chest", "", "<light_purple>► Click to open"]
+    menu-id: storage
+    required-capability: ""

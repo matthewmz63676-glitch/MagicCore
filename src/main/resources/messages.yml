@@ -1,0 +1,16 @@
+config-version: 1
+
+prefix: "<dark_gray>[</dark_gray><aqua>MagicCore</aqua><dark_gray>]</dark_gray> "
+errors:
+  unavailable: "<red>This feature is currently unavailable: <reason></red>"
+  no-capability: "<red>You need the <capability> capability.</red>"
+economy:
+  balance: "<white>Balance:</white> <green><amount></green>"
+  paid: "<green>Payment completed.</green>"
+teams:
+  created: "<green>Team <team> created.</green>"
+rewards:
+  claimed: "<green>Reward <reward> claimed.</green>"
+  not-ready: "<yellow>This reward is not ready yet.</yellow>"
+admin:
+  committed: "<green>Configuration revision <revision> committed.</green>"

@@ -1,0 +1,41 @@
+config-version: 1
+
+# INTERNAL = MagicCore owns behavior and persistence.
+# EXTERNAL = a configured adapter owns it. DISABLED = no registrations or side effects.
+features:
+  profiles: INTERNAL
+  economy: INTERNAL
+  ranks: INTERNAL
+  teams: INTERNAL
+  rewards: INTERNAL
+
+  # Phase 2 backends. Registrations are still governed by module lifecycle.
+  essentials: INTERNAL
+  shop: INTERNAL
+  auctions: INTERNAL
+  orders: INTERNAL
+  lifesteal: INTERNAL
+  combat: INTERNAL
+  bounties: INTERNAL
+  crates: INTERNAL
+  display: INTERNAL
+  holograms: DISABLED
+  npcs: DISABLED
+  discord: DISABLED
+  koth: INTERNAL
+  vote-party: INTERNAL
+  afk-shards: INTERNAL
+  presentation: INTERNAL
+  menus: INTERNAL
+  settings: INTERNAL
+  item-worth: INTERNAL
+  fast-crystal: INTERNAL
+  spawn-stash: INTERNAL
+  billford-trade: INTERNAL
+  custom-tools: INTERNAL
+  keyalls: INTERNAL
+  vaults: INTERNAL
+  gemshop: INTERNAL
+  player-warps: INTERNAL
+  requirements: DISABLED
+  store: INTERNAL

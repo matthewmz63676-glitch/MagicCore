@@ -1,0 +1,10 @@
+config-version: 1
+currency: COINS
+minimum-amount-minor: 100
+maximum-amount-minor: 10000000
+tax-basis-points: 500
+maximum-contributions-per-target: 100
+restrictions:
+  enabled: false
+  minimum-target-playtime-seconds: 0
+  minimum-target-kills: 0

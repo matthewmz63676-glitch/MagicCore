@@ -1,0 +1,102 @@
+config-version: 1
+
+system:
+  provider: INTERNAL # INTERNAL, LUCKPERMS, HYBRID, DISABLED
+  default-rank: DEFAULT
+  sync-to-luckperms: false
+
+ranks:
+  DEFAULT:
+    type: PLAYER
+    display: "<gray>Player</gray>"
+    weight: 0
+    perks: []
+    abilities: []
+    inherits: []
+    limits: { HOMES: 1, AUCTION_SLOTS: 2, TEAM_SIZE: 5, VAULT_ROWS: 1 }
+
+  VIP:
+    type: DONOR
+    display: "<#66E3A4>VIP</#66E3A4>"
+    weight: 10
+    inherits: [DEFAULT]
+    perks: [BACK, CRAFT, KIT_VIP]
+    abilities: []
+    limits: { HOMES: 3, AUCTION_SLOTS: 5, TEAM_SIZE: 7, VAULT_ROWS: 2 }
+  VIP_PLUS:
+    type: DONOR
+    display: "<#4FA3FF>VIP+</#4FA3FF>"
+    weight: 20
+    inherits: [VIP]
+    perks: [ENDER_CHEST, KIT_VIP_PLUS]
+    abilities: []
+    limits: { HOMES: 5, AUCTION_SLOTS: 8, TEAM_SIZE: 9, VAULT_ROWS: 3 }
+  MVP:
+    type: DONOR
+    display: "<#9660EF>MVP</#9660EF>"
+    weight: 30
+    inherits: [VIP_PLUS]
+    perks: [FLY, NICKNAME, KIT_MVP]
+    abilities: []
+    limits: { HOMES: 7, AUCTION_SLOTS: 12, TEAM_SIZE: 11, VAULT_ROWS: 4 }
+  ELITE:
+    type: DONOR
+    display: "<#C77DFF>Elite</#C77DFF>"
+    weight: 40
+    inherits: [MVP]
+    perks: [REPAIR, PLAYER_WARP, KIT_ELITE]
+    abilities: []
+    limits: { HOMES: 10, AUCTION_SLOTS: 16, TEAM_SIZE: 13, VAULT_ROWS: 5 }
+  LEGEND:
+    type: DONOR
+    display: "<#FFD166>Legend</#FFD166>"
+    weight: 50
+    inherits: [ELITE]
+    perks: [FLY_SPEED, KEEP_EXPERIENCE, KIT_LEGEND]
+    abilities: []
+    limits: { HOMES: 15, AUCTION_SLOTS: 24, TEAM_SIZE: 15, VAULT_ROWS: 6 }
+
+  HELPER:
+    type: STAFF
+    display: "<#7FE7C4>Helper</#7FE7C4>"
+    weight: 100
+    inherits: []
+    perks: []
+    abilities: [WARN, VIEW_REPORTS, STAFF_CHAT, STAFF_NAVIGATION, SPAWNSTASH_ALERTS]
+    limits: {}
+  MODERATOR:
+    type: STAFF
+    display: "<#4FA3FF>Moderator</#4FA3FF>"
+    weight: 110
+    inherits: [HELPER]
+    perks: []
+    abilities: [MUTE, TEMP_MUTE, KICK, VIEW_HISTORY, VANISH, SPAWNSTASH_MANAGE, PROFILE_ADMIN_VIEW, APPLICATION_STAFF]
+    limits: {}
+  SENIOR_MODERATOR:
+    type: STAFF
+    display: "<#9660EF>Senior Moderator</#9660EF>"
+    weight: 120
+    inherits: [MODERATOR]
+    perks: []
+    abilities: [TEMP_BAN, UNMUTE, MANAGE_REPORTS, PLAYERWARPS_MODERATE]
+    limits: {}
+  ADMIN:
+    type: STAFF
+    display: "<#FF6B6B>Admin</#FF6B6B>"
+    weight: 130
+    inherits: [SENIOR_MODERATOR]
+    perks: []
+    abilities: [BAN, UNBAN, MANAGE_PLAYERS, MANAGE_ECONOMY, MANAGE_REWARDS, VIEW_DIAGNOSTICS, SELL_RECONCILE, BILLFORD_RECONCILE, TOOLS_ADMIN, RESET_STATS, KEYALL_MANAGE, STORAGE_INSPECT, EVENTS_MANAGE]
+    limits: {}
+  OWNER:
+    type: STAFF
+    display: "<#FFD166>Owner</#FFD166>"
+    weight: 1000
+    inherits: [ADMIN]
+    perks: []
+    abilities: [ALL]
+    limits: {}
+
+advanced-permissions:
+  enabled: false
+  extra-nodes: {}

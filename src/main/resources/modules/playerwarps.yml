@@ -1,0 +1,11 @@
+config-version: 1
+categories: [SHOPS, FARMS, BUILDS, PVP, OTHER]
+default-expiry-seconds: 2592000
+sponsorship:
+  enabled: true
+  currency: COINS
+  price-per-hour-minor: 1000
+  minimum-duration-seconds: 3600
+  maximum-duration-seconds: 604800
+  maximum-active-global: 12
+  maximum-active-per-player: 2

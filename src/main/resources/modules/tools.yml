@@ -1,0 +1,31 @@
+config-version: 1
+tools:
+  - id: wild_tool
+    material: NETHERITE_PICKAXE
+    display-name: "<green>Wild Tool</green>"
+    durability: 750
+    cooldown-millis: 750
+    drop-policy: VANILLA
+    block-allowlist: [STONE, COBBLESTONE, DEEPSLATE, NETHERRACK, DIRT, GRASS_BLOCK, SAND, GRAVEL]
+    recipe:
+      enabled: true
+      shape: ["EPE", "APA", " S "]
+      ingredients: { E: EMERALD_BLOCK, P: NETHERITE_PICKAXE, A: AMETHYST_SHARD, S: STICK }
+    upgrades:
+      - { level: 1, shape: PLANE, radius: 1, depth: 1, drop-multiplier: 1 }
+      - { level: 2, shape: PLANE, radius: 2, depth: 1, drop-multiplier: 1 }
+      - { level: 3, shape: CUBE, radius: 1, depth: 3, drop-multiplier: 2 }
+  - id: amethyst_tool
+    material: DIAMOND_PICKAXE
+    display-name: "<light_purple>Amethyst Tool</light_purple>"
+    durability: 500
+    cooldown-millis: 1000
+    drop-policy: VANILLA
+    block-allowlist: [AMETHYST_BLOCK, BUDDING_AMETHYST, CALCITE, SMOOTH_BASALT, TUFF]
+    recipe:
+      enabled: true
+      shape: ["AAA", "APA", " S "]
+      ingredients: { A: AMETHYST_BLOCK, P: DIAMOND_PICKAXE, S: STICK }
+    upgrades:
+      - { level: 1, shape: PLANE, radius: 1, depth: 1, drop-multiplier: 1 }
+      - { level: 2, shape: CUBE, radius: 1, depth: 2, drop-multiplier: 1 }

@@ -1,0 +1,38 @@
+name: MagicCore
+version: '${version}'
+main: com.magicstudios.magiccore.bootstrap.MagicCorePlugin
+description: Modular economy SMP core with typed services and explicit providers
+api-version: '1.21.11'
+folia-supported: true
+authors: [MagicStudios]
+softdepend: [Vault, LuckPerms, PlaceholderAPI, WorldGuard, GriefPrevention, TAB, DiscordSRV, floodgate, Geyser-Spigot, ItemsAdder, Nexo, DecentHolograms, Citizens, RoseStacker, WildStacker, ExcellentCrates, Vulcan, Apollo-Bukkit, Apollo, Votifier]
+commands:
+  magic:
+    description: MagicCore setup, administration, and diagnostics
+    usage: /magic <menu|koth|vote|setup|admin|diagnose|reload|info|server|apply|profile|worth|home|warp|tpa|back|rtp|spawn|setspawn|kit|settings|shop|sell|pwarp|auction|order|bounty|market|hearts|combat|crate|stats|store|import|leaderboard|shards>
+    aliases: [magiccore]
+  spawnstash:
+    description: Create and review observe-only SpawnStash evidence cases
+    usage: /spawnstash <preview|create|list|review|note|close|remove|relocate>
+permissions:
+  magiccore.command.magic:
+    description: Access the MagicCore root command
+    default: op
+  magiccore.admin.revive:
+    description: Revive an eliminated Lifesteal player when revival is enabled
+    default: op
+  magiccore.admin.crates:
+    description: Grant crate keys
+    default: op
+  magiccore.admin.import:
+    description: Preview, execute, and reconcile data imports
+    default: op
+  magiccore.admin.shards:
+    description: Inspect and adjust AFK shard balances
+    default: op
+  magiccore.staff.spawnstash:
+    description: Create and review SpawnStash evidence cases
+    default: false
+  magiccore.staff.spawnstash.alerts:
+    description: Receive live SpawnStash evidence alerts
+    default: false

@@ -1,0 +1,36 @@
+config-version: 1
+currency: COINS
+
+policies:
+  # IGNORE, ADDITIVE, or REJECT
+  enchantments: ADDITIVE
+  enchantment-basis-points-per-level: 250
+  # IGNORE, LINEAR, or REJECT_DAMAGED
+  durability: LINEAR
+  minimum-durability-basis-points: 1000
+  # ALLOW or REJECT_NONSTANDARD
+  metadata: ALLOW
+  # REJECT_NONEMPTY, REJECT_ALL, or IGNORE
+  containers: REJECT_NONEMPTY
+  # REJECT_ALL or USE_ENTRY
+  spawners: USE_ENTRY
+  protected-item-ids: [minecraft:knowledge_book]
+  protected-metadata-keys: [magiccore:protected, magiccore:unsellable]
+
+presentation:
+  lore: true
+  action-bar: true
+  placeholder: true
+  worth-template: "Worth: {amount} {currency}"
+  unavailable-text: "Not sellable"
+
+# Custom items use their provider's canonical namespaced ID, for example
+# itemsadder:ruby or nexo:amethyst_drill. Vanilla IDs use minecraft:material.
+entries:
+  - { id: stone, item-id: "minecraft:stone", category: blocks, unit-worth-minor: 3 }
+  - { id: coal, item-id: "minecraft:coal", category: minerals, unit-worth-minor: 8 }
+  - { id: iron-ingot, item-id: "minecraft:iron_ingot", category: minerals, unit-worth-minor: 20 }
+  - { id: gold-ingot, item-id: "minecraft:gold_ingot", category: minerals, unit-worth-minor: 30 }
+  - { id: diamond, item-id: "minecraft:diamond", category: minerals, unit-worth-minor: 100 }
+  - { id: emerald, item-id: "minecraft:emerald", category: minerals, unit-worth-minor: 85 }
+  - { id: spawner, item-id: "minecraft:spawner", category: spawners, unit-worth-minor: 2500 }

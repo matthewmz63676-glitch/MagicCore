@@ -1,0 +1,10 @@
+config-version: 1
+enabled: false
+secret-env: MAGICCORE_DISCORD_BRIDGE_SECRET
+link-code-ttl-seconds: 600
+message-maximum-age-seconds: 60
+maximum-messages-per-minute: 120
+maximum-retry-attempts: 8
+retry-base-seconds: 5
+bind-host: 127.0.0.1
+bind-port: 8765

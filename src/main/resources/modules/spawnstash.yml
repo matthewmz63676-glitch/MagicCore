@@ -1,0 +1,54 @@
+config-version: 1
+
+# Evidence only. A case never applies punishment automatically.
+observe-only: true
+expiry-seconds: 1800
+
+placement:
+  block-count: 12
+  minimum-horizontal-radius: 10
+  maximum-horizontal-radius: 24
+  minimum-vertical-offset: -8
+  maximum-vertical-offset: 4
+  cluster-radius: 3
+  maximum-candidate-attempts: 96
+
+signals:
+  approach-distance: 8.0
+  reveal-distance: 20.0
+  reveal-dot-product: 0.94
+  suspicious-path-improvement: 7.0
+  suspicious-path-samples: 4
+  per-signal-cooldown-seconds: 10
+
+alerts:
+  enabled: true
+  capability: SPAWNSTASH_ALERTS
+
+# block-data accepts Bukkit block-data strings. Container-looking decoys are
+# populated only with configured appearance items; they never award value.
+decoy-blocks:
+  - id: chest
+    block-data: minecraft:chest
+    weight: 35
+    loot-appearance:
+      - material: DIAMOND
+        minimum-amount: 1
+        maximum-amount: 3
+        weight: 1
+      - material: NETHERITE_SCRAP
+        minimum-amount: 1
+        maximum-amount: 2
+        weight: 1
+  - id: spawner
+    block-data: minecraft:spawner
+    weight: 15
+    loot-appearance: []
+  - id: amethyst
+    block-data: minecraft:amethyst_block
+    weight: 30
+    loot-appearance: []
+  - id: cake
+    block-data: minecraft:cake
+    weight: 20
+    loot-appearance: []

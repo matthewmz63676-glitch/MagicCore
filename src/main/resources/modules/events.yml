@@ -1,0 +1,54 @@
+config-version: 1
+
+koth:
+  enabled: true
+  tick-seconds: 1
+  definitions:
+    - id: SPAWN_HILL
+      enabled: false
+      display-name: Spawn Hill
+      world: world
+      minimum-x: -15.0
+      minimum-y: 60.0
+      minimum-z: -15.0
+      maximum-x: 15.0
+      maximum-y: 90.0
+      maximum-z: 15.0
+      capture-seconds: 60
+      first-delay-seconds: 300
+      schedule-interval-seconds: 7200
+      banned-materials: [ELYTRA, END_CRYSTAL]
+      reward: { currency: COINS, amount-minor: 5000 }
+
+vote-party:
+  enabled: true
+  threshold: 50
+  # COUNT_AND_REWARD queues verified offline voters for pinata rewards; COUNT_ONLY
+  # counts them without eligibility; IGNORE does neither.
+  offline-policy: COUNT_AND_REWARD
+  require-voter-for-rewards: true
+  pinata:
+    world: world
+    x: 0.5
+    y: 80.0
+    z: 0.5
+    entity-type: LLAMA
+    maximum-hits: 100
+    maximum-hits-per-player: 5
+    hit-reward: { currency: COINS, amount-minor: 100 }
+    final-reward: { currency: COINS, amount-minor: 1000 }
+    bossbar-title: "<gold><b>Vote Pinata</b></gold> <white>{remaining}/{maximum} hits</white>"
+
+announcements:
+  - id: COMMUNITY
+    enabled: true
+    first-delay-seconds: 300
+    interval-seconds: 900
+    message: "<aqua>Use <white>/magic menu</white> to explore server features.</aqua>"
+    sound: BLOCK_NOTE_BLOCK_PLING
+    title: ""
+    subtitle: ""
+
+maintenance:
+  sponsorship-expiry-interval-seconds: 300
+  secure-storage-recovery-interval-seconds: 300

@@ -1,0 +1,3 @@
+package com.magicstudios.magiccore.modules.billford;
+import java.util.List;import java.util.Optional;import java.util.UUID;import java.util.concurrent.CompletionStage;
+public interface BillfordService{List<BillfordRecipe>recipes();CompletionStage<BillfordPreview>preview(UUID playerId,String recipeId);CompletionStage<BillfordExchange>exchange(UUID playerId,String recipeId,List<BillfordCandidate>inventory,String operationKey);CompletionStage<Optional<BillfordExchange>>find(UUID exchangeId);CompletionStage<Integer>recover();CompletionStage<BillfordExchange>reconcile(UUID exchangeId,boolean removalConfirmed,String operationKey);}

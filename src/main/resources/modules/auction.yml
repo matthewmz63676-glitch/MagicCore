@@ -1,0 +1,8 @@
+config-version: 1
+currency: COINS
+minimum-price-minor: 100
+maximum-price-minor: 100000000
+listing-fee-minor: 25
+minimum-duration-seconds: 300
+maximum-duration-seconds: 604800
+categories: [blocks, tools, weapons, armor, consumables, misc]

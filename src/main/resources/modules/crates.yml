@@ -1,0 +1,58 @@
+config-version: 1
+currency: COINS
+keyall:
+  enabled: true
+  maximum-recipients: 10000
+  definitions:
+    - id: VOTE_KEYALL
+      key-id: VOTE_KEY
+      amount: 1
+      audience: ONLINE
+      offline-delivery: false
+      schedule-interval-seconds: 3600
+      threshold: 100
+crates:
+  - id: VOTE
+    display-name: "<aqua>Vote Crate</aqua>"
+    cost:
+      type: KEY
+      key-id: VOTE_KEY
+      amount: 1
+    maximum-open-amount: 10
+    rewards:
+      - id: VOTE_DIAMONDS
+        type: ITEM
+        weight: 70
+        rarity: COMMON
+        material: DIAMOND
+        amount: 4
+        item-data-base64: ""
+        currency: ""
+        amount-minor: 0
+        key-id: ""
+        key-amount: 0
+      - id: VOTE_COINS
+        type: CURRENCY
+        weight: 25
+        rarity: RARE
+        material: AIR
+        amount: 0
+        item-data-base64: ""
+        currency: COINS
+        amount-minor: 2500
+        key-id: ""
+        key-amount: 0
+      - id: VOTE_KEY_BONUS
+        type: KEY
+        weight: 5
+        rarity: EPIC
+        material: AIR
+        amount: 0
+        item-data-base64: ""
+        currency: ""
+        amount-minor: 0
+        key-id: VOTE_KEY
+        key-amount: 2
+    milestones:
+      - open-count: 25
+        reward-id: VOTE_KEY_BONUS

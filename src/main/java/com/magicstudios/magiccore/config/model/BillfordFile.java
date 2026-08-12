@@ -1,0 +1,3 @@
+package com.magicstudios.magiccore.config.model;
+import java.util.List;
+public record BillfordFile(int configVersion,List<Recipe>recipes){public BillfordFile{recipes=List.copyOf(recipes);}public record Recipe(String id,String displayName,int stock,int perPlayerLimit,long cooldownSeconds,List<Ingredient>ingredients,List<Reward>rewards){public Recipe{ingredients=List.copyOf(ingredients);rewards=List.copyOf(rewards);}}public record Ingredient(String itemId,int amount){}public record Reward(String id,String type,int weight,String currency,long amountMinor,String material,int amount,String itemDataBase64){} }

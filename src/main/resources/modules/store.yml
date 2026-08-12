@@ -1,0 +1,32 @@
+config-version: 1
+url: "https://store.example.com"
+purchases-enabled: false
+signature-secret-env: MAGICCORE_STORE_WEBHOOK_SECRET
+signature-maximum-age-seconds: 86400
+announce-purchases: true
+donation-goal:
+  enabled: false
+  target-minor: 100000
+products:
+  - id: STARTER_PACK
+    display-name: "<gold>Starter Pack</gold>"
+    minimum-paid-minor: 499
+    actions:
+      - type: CURRENCY
+        currency: COINS
+        amount-minor: 10000
+        key-id: ""
+        key-amount: 0
+        material: AIR
+        amount: 0
+        item-data-base64: ""
+        rank-id: ""
+      - type: CRATE_KEY
+        currency: ""
+        amount-minor: 0
+        key-id: VOTE_KEY
+        key-amount: 5
+        material: AIR
+        amount: 0
+        item-data-base64: ""
+        rank-id: ""

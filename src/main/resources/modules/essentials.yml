@@ -1,0 +1,28 @@
+config-version: 1
+homes:
+  maximum-name-length: 24
+teleport:
+  request-lifetime-seconds: 60
+  warmup-seconds: 3
+  movement-tolerance: 0.25
+  cooldown-seconds: 10
+  cost-minor: 0
+  currency: COINS
+rtp:
+  center-x: 0.0
+  center-z: 0.0
+  minimum-radius: 500.0
+  maximum-radius: 5000.0
+  maximum-attempts: 32
+kits:
+  - id: starter
+    display-name: "Starter"
+    cooldown-seconds: 86400
+    capability: ""
+    items:
+      - material: STONE_PICKAXE
+        amount: 1
+        item-data-base64: ""
+      - material: BREAD
+        amount: 16
+        item-data-base64: ""

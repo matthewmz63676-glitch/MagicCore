@@ -1,0 +1,28 @@
+config-version: 1
+
+policy:
+  interval-seconds: 60
+  base-shards: 2
+  daily-cap: 500
+  reconnect-protection-seconds: 180
+  diminishing-after: 200
+  diminishing-basis-points: 5000
+
+eligibility:
+  minimum-session-seconds: 300
+  minimum-presence-samples: 3
+  minimum-distinct-positions: 1
+  minimum-look-changes: 0
+  maximum-macro-risk-basis-points: 2500
+
+zones:
+  - id: spawn_afk
+    type: NATIVE
+    world: world
+    world-guard-region: ""
+    minimum-x: -16
+    minimum-y: 50
+    minimum-z: -16
+    maximum-x: 16
+    maximum-y: 100
+    maximum-z: 16

@@ -1,0 +1,9 @@
+config-version: 1
+lease-seconds: 120
+maximum-vaults: 10
+vault-rows-limit: VAULT_ROWS
+maximum-item-payload-bytes: 65536
+maximum-container-payload-bytes: 1048576
+nested-container-policy: DENY_NON_EMPTY
+custom-item-policy: ALLOW
+admin-capability: STORAGE_INSPECT

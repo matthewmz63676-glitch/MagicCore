@@ -1,0 +1,101 @@
+config-version: 1
+
+# These are view-model definitions, not inventory layouts. Phase 7 GUIs may render
+# them without copying business rules into click handlers.
+info:
+  - id: rules
+    title: Server Rules
+    description: Read the rules before trading or entering combat.
+    material: WRITABLE_BOOK
+    slot: 11
+    action: COMMAND:/rules
+    required-capability: ""
+  - id: store
+    title: Store
+    description: View ranks, cosmetics, and donation-goal progress.
+    material: EMERALD
+    slot: 13
+    action: COMMAND:/magic store
+    required-capability: ""
+  - id: support
+    title: Support
+    description: Open the server support information.
+    material: PAPER
+    slot: 15
+    action: COMMAND:/discord
+    required-capability: ""
+
+server-navigation:
+  - id: spawn
+    title: Spawn
+    description: Return to the configured server spawn.
+    material: COMPASS
+    slot: 10
+    action: COMMAND:/magic spawn
+    required-capability: ""
+  - id: warps
+    title: Warps
+    description: Browse server and player destinations.
+    material: ENDER_PEARL
+    slot: 12
+    action: COMMAND:/magic warp list
+    required-capability: ""
+  - id: auction
+    title: Auction House
+    description: Browse player listings and market history.
+    material: GOLD_INGOT
+    slot: 14
+    action: COMMAND:/magic auction list
+    required-capability: ""
+  - id: staff
+    title: Staff Tools
+    description: Open staff-only server administration entries.
+    material: COMMAND_BLOCK
+    slot: 16
+    action: COMMAND:/magic admin
+    required-capability: STAFF_NAVIGATION
+
+applications:
+  media:
+    title: Media Application
+    apply-url: https://example.invalid/apply/media
+    requirements:
+      - id: playtime
+        type: PLAYTIME_SECONDS
+        label: Playtime
+        target: 86400
+        capability: ""
+      - id: kills
+        type: KILLS
+        label: Player kills
+        target: 10
+        capability: ""
+      - id: public-profile
+        type: SETTING_ENABLED
+        label: Public profile enabled
+        target: 1
+        capability: PROFILE_PUBLIC
+  staff:
+    title: Staff Application
+    apply-url: https://example.invalid/apply/staff
+    requirements:
+      - id: account-age
+        type: ACCOUNT_AGE_SECONDS
+        label: Account age on this server
+        target: 604800
+        capability: ""
+      - id: playtime
+        type: PLAYTIME_SECONDS
+        label: Playtime
+        target: 172800
+        capability: ""
+      - id: clean-standing
+        type: DEATHS_MAXIMUM
+        label: Death ceiling
+        target: 250
+        capability: ""
+      - id: application-access
+        type: CAPABILITY
+        label: Application access
+        target: 1
+        capability: APPLICATION_STAFF

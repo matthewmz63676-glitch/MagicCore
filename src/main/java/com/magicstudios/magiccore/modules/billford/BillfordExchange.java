@@ -1,0 +1,3 @@
+package com.magicstudios.magiccore.modules.billford;
+import com.magicstudios.magiccore.modules.shop.BatchInventoryRemovalPort;import java.time.Instant;import java.util.List;import java.util.UUID;
+public record BillfordExchange(UUID id,UUID playerId,String recipeId,List<BatchInventoryRemovalPort.RemovalLine>removals,BillfordReward reward,Status status,String operationKey,String recoveryPayloadBase64,Instant createdAt,Instant updatedAt){public BillfordExchange{removals=List.copyOf(removals);recoveryPayloadBase64=recoveryPayloadBase64==null?"":recoveryPayloadBase64;}public enum Status{RESERVED,REMOVED,SETTLED,REJECTED,RECOVERY_REQUIRED}}

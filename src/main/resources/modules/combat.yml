@@ -1,0 +1,23 @@
+config-version: 1
+tag-duration-seconds: 15
+restricted-commands: [spawn, home, warp, back, rtp, tpa, auction, order, shop]
+logout-policy: KILL_AND_CREDIT
+ender-pearl-cooldown-millis: 10000
+trident-cooldown-millis: 5000
+restricted-items: [CHORUS_FRUIT, ELYTRA]
+newbie-protection:
+  enabled: true
+  duration-seconds: 86400
+  remove-on-attack: true
+fast-crystal:
+  enabled: true
+  cooldown-millis: 250
+  maximum-range: 6.0
+  require-line-of-sight: true
+  world-allowlist: []
+  base-blocks: [OBSIDIAN, BEDROCK]
+  damage: 6.0
+  knockback: 0.7
+  sound: ENTITY_GENERIC_EXPLODE
+  sound-volume: 1.0
+  sound-pitch: 1.1

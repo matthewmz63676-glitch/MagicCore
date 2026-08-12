@@ -1,0 +1,58 @@
+config-version: 1
+
+luckperms:
+  enabled: false
+  mode: HYBRID
+  sync-to-luckperms: false
+
+vault:
+  enabled: true
+  register-internal-economy: true
+
+placeholderapi:
+  enabled: true
+  # Internal placeholders always remain available.
+
+worldguard:
+  enabled: true
+
+claims:
+  provider: AUTO
+
+discord:
+  provider: CUSTOM_BOT
+  enabled: false
+
+lunar-client:
+  provider: APOLLO
+  enabled: false
+
+display:
+  provider: INTERNAL
+
+custom-items:
+  provider: NONE
+
+holograms:
+  provider: NONE
+
+npcs:
+  provider: NONE
+
+spawners:
+  provider: AUTO
+
+crates:
+  provider: INTERNAL
+
+# Optional Vulcan flag capture for diagnostics and SpawnStash evidence.
+# MagicCore only records bounded flag evidence and never changes Vulcan decisions.
+vulcan:
+  enabled: true
+  capture-flags: true
+  retention-seconds: 3600
+  maximum-flags-per-player: 128
+
+bedrock:
+  detect-geyser-floodgate: true
+  use-bedrock-safe-interactions: true
